@@ -39,7 +39,7 @@
       <PropertyRef Name="id" />
     </Key>
     <Property Name="id" Type="Int32" Nullable="false" />
-    <Property Name="idRole" Type="Int32" Nullable="false" />
+    <Property Name="idRole" Type="Int32" />
     <Property Name="userName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="login" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
@@ -47,16 +47,16 @@
     <Property Name="numberPhone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="seriaPass" Type="Int32" Nullable="false" />
     <Property Name="numberPass" Type="Int32" Nullable="false" />
-    <Property Name="birthdayDate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="birthdayDate" Type="DateTime" Precision="0" />
     <Property Name="lastInvite" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="idGender" Type="Int32" Nullable="false" />
+    <Property Name="idGender" Type="Int32" />
     <Property Name="idTypeInsert" Type="Int32" />
     <NavigationProperty Name="GenderUser" Relationship="Self.FK_Users_GenderUser" FromRole="Users" ToRole="GenderUser" />
     <NavigationProperty Name="RoleUser" Relationship="Self.FK_Users_RoleUser" FromRole="Users" ToRole="RoleUser" />
     <NavigationProperty Name="TypeInsert" Relationship="Self.FK_Users_TypeInsert" FromRole="Users" ToRole="TypeInsert" />
   </EntityType>
   <Association Name="FK_Users_GenderUser">
-    <End Role="GenderUser" Type="Self.GenderUser" Multiplicity="1" />
+    <End Role="GenderUser" Type="Self.GenderUser" Multiplicity="0..1" />
     <End Role="Users" Type="Self.Users" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="GenderUser">
@@ -68,7 +68,7 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Users_RoleUser">
-    <End Role="RoleUser" Type="Self.RoleUser" Multiplicity="1" />
+    <End Role="RoleUser" Type="Self.RoleUser" Multiplicity="0..1" />
     <End Role="Users" Type="Self.Users" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="RoleUser">

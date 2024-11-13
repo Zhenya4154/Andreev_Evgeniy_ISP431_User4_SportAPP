@@ -13,31 +13,46 @@
             <ColumnDefinition></ColumnDefinition>
             <ColumnDefinition></ColumnDefinition>
         </Grid.ColumnDefinitions>
-        <StackPanel Grid.Column="0" 
-                    HorizontalAlignment="Center"
-                    VerticalAlignment="Center">
-            <Label Content="ФИО:"></Label>
-            <TextBox x:Name="UserNameTextBox"></TextBox>
-            <Label Content="Должность:"></Label>
-            <ComboBox x:Name="RoleComboBox"></ComboBox>
-            <Label Content="Дата рождения:"></Label>
-            <DatePicker x:Name="BirthdayDatePicker"></DatePicker>
+        <StackPanel Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Label Content="ФИО:" ></Label>
+            <TextBox x:Name="UserNameTextBox" HorizontalContentAlignment="Center"
+                 VerticalContentAlignment="Center"></TextBox>
+            <Label Content="Должность:" ></Label>
+            <ComboBox x:Name="RoleComboBox" DisplayMemberPath="role"
+                  HorizontalContentAlignment="Center"
+                 VerticalContentAlignment="Center"></ComboBox>
+            <Label Content="Дата рождения:" ></Label>
+            <DatePicker x:Name="BitrhdayDatePicker"
+                    HorizontalContentAlignment="Center"
+                 VerticalContentAlignment="Center"></DatePicker>
             <Label Content="Номер телефона:"></Label>
-            <TextBox x:Name="NumberPhoneTextBox"></TextBox>
+            <TextBox x:Name="NumberPhoneTextBox"
+                 HorizontalContentAlignment="Center"
+                 VerticalContentAlignment="Center"></TextBox>
             <Label Content="Пол:"></Label>
-            <ComboBox x:Name="GenderComboBox"></ComboBox>
+            <ComboBox x:Name="GenderComboBox" DisplayMemberPath="gender"
+                  HorizontalContentAlignment="Center"
+                 VerticalContentAlignment="Center"></ComboBox>
         </StackPanel>
-        <StackPanel Grid.Column="1"
-                    HorizontalAlignment="Center"
-                    VerticalAlignment="Center">
+        <StackPanel Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center">
             <Label Content="Почта:"></Label>
-            <TextBox x:Name="EmailTextBox"></TextBox>
+            <TextBox x:Name="EmailTextBox"
+                 HorizontalContentAlignment="Center"
+                 VerticalContentAlignment="Center"></TextBox>
             <Label Content="Логин:"></Label>
-            <TextBox x:Name="LoginTextBox"></TextBox>
+            <TextBox x:Name="LoginTextBox"
+                 HorizontalContentAlignment="Center"
+                 VerticalContentAlignment="Center"></TextBox>
             <Label Content="Пароль:"></Label>
-            <PasswordBox x:Name="PasswordTextBox"></PasswordBox>
-            <Label Content="подтверждение пароля:"></Label>
-            <PasswordBox x:Name="ConfirmPasswordTextBox"></PasswordBox>
+            <PasswordBox x:Name="PasswordTextBox"
+                 HorizontalContentAlignment="Center"
+                 VerticalContentAlignment="Center"></PasswordBox>
+            <Label Content="Подтверждение пароля:"></Label>
+            <PasswordBox x:Name="ConfirmPasswordTextBox"
+                 HorizontalContentAlignment="Center"
+                 VerticalContentAlignment="Center"></PasswordBox>
+            <Button x:Name="AddButton" Click="AddButton_Click" Content="Подтвердить" Margin="10"></Button>
+            <Button x:Name="BackButton" Click="BackButton_Click" Content="Назад" ></Button>
         </StackPanel>
     </Grid>
 </Page>

@@ -12,8 +12,7 @@ namespace SportApp.Data
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
-    using System.Runtime.CompilerServices;
-
+    
     public partial class User4Entities : DbContext
     {
         private static User4Entities _context;
@@ -21,9 +20,9 @@ namespace SportApp.Data
             : base("name=User4Entities")
         {
         }
-         public static User4Entities GetContext()
+        public static User4Entities GetContext()
         {
-            if( _context == null)
+            if (_context == null)
             {
                 _context = new User4Entities();
             }
