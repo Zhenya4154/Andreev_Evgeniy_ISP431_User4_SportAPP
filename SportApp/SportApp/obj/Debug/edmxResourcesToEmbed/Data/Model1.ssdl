@@ -36,7 +36,7 @@
       <PropertyRef Name="id" />
     </Key>
     <Property Name="id" Type="int" Nullable="false" />
-    <Property Name="idRole" Type="int" />
+    <Property Name="idRole" Type="int" Nullable="false" />
     <Property Name="userName" Type="nvarchar" MaxLength="50" Nullable="false" />
     <Property Name="email" Type="nvarchar" MaxLength="50" Nullable="false" />
     <Property Name="login" Type="nvarchar" MaxLength="50" Nullable="false" />
@@ -44,13 +44,13 @@
     <Property Name="numberPhone" Type="nvarchar" MaxLength="50" Nullable="false" />
     <Property Name="seriaPass" Type="int" Nullable="false" />
     <Property Name="numberPass" Type="int" Nullable="false" />
-    <Property Name="birthdayDate" Type="date" />
+    <Property Name="birthdayDate" Type="date" Nullable="false" />
     <Property Name="lastInvite" Type="nvarchar" MaxLength="50" />
-    <Property Name="idGender" Type="int" />
+    <Property Name="idGender" Type="int" Nullable="false" />
     <Property Name="idTypeInsert" Type="int" />
   </EntityType>
   <Association Name="FK_Users_GenderUser">
-    <End Role="GenderUser" Type="Self.GenderUser" Multiplicity="0..1" />
+    <End Role="GenderUser" Type="Self.GenderUser" Multiplicity="1" />
     <End Role="Users" Type="Self.Users" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="GenderUser">
@@ -62,7 +62,7 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Users_RoleUser">
-    <End Role="RoleUser" Type="Self.RoleUser" Multiplicity="0..1" />
+    <End Role="RoleUser" Type="Self.RoleUser" Multiplicity="1" />
     <End Role="Users" Type="Self.Users" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="RoleUser">

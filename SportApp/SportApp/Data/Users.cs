@@ -15,7 +15,7 @@ namespace SportApp.Data
     public partial class Users
     {
         public int id { get; set; }
-        public Nullable<int> idRole { get; set; }
+        public int idRole { get; set; }
         public string userName { get; set; }
         public string email { get; set; }
         public string login { get; set; }
@@ -23,9 +23,9 @@ namespace SportApp.Data
         public string numberPhone { get; set; }
         public int seriaPass { get; set; }
         public int numberPass { get; set; }
-        public Nullable<System.DateTime> birthdayDate { get; set; }
+        public System.DateTime birthdayDate { get; set; }
         public string lastInvite { get; set; }
-        public Nullable<int> idGender { get; set; }
+        public int idGender { get; set; }
         public Nullable<int> idTypeInsert { get; set; }
     
         public virtual GenderUser GenderUser { get; set; }
